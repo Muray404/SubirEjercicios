@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Punto1 {
 
-//    -------------------- MAIN --------------------------------------
+    //    -------------------- MAIN --------------------------------------
     static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -21,6 +21,7 @@ public class Punto1 {
         for (int i = 0; i < palabras; i++) {
 
             boolean palindromo = CalcularPalindromo(textos[i]);
+//            boolean palindromo = calcularPalindromo(textos);
             int vocales = contarVocales(textos[i]);
 
             if (palindromo) {
@@ -34,7 +35,7 @@ public class Punto1 {
         System.out.println("\nTotal de palindromos: " + totalPalindromos);
 
 
-        System.out.println("\n Palabra con mas vocales: "+ palabraMasVocales(textos));
+        System.out.println("\n Palabra con mas vocales: " + palabraMasVocales(textos));
 
     }
 //    -------------------- MAIN --------------------------------------
@@ -42,7 +43,7 @@ public class Punto1 {
 
 // ---------------------------FUNCION 1 ----------------------------
 
-    public static boolean CalcularPalindromo(String texto) {
+     static boolean CalcularPalindromo(String texto) {
         boolean palindromo = true;
         texto = texto.toLowerCase();
         for (int i = 0; i < texto.length() / 2; i++) {
@@ -53,7 +54,17 @@ public class Punto1 {
         return palindromo;
     }
 //---------------------------FUNCION 2 ---------------------------------------
+/*
+    static boolean calcularPalindromo (String[] textos){
+        boolean palindromo = true;
+        for (ínt i = 0; i<textos.length/2; i++){
 
+        }
+        return ;
+    }
+ */
+
+    //---------------------------FUNCION 2 ---------------------------------------
     public static int contarVocales(String texto) {
         int vocales = 0;
         texto = texto.toLowerCase();
@@ -69,7 +80,6 @@ public class Punto1 {
         }
         return vocales;
     }
-
 //----------------------------FUNCION 3 ----------------------------------------------
 
     private static String palabraMasVocales(String[] textos) {
@@ -83,4 +93,4 @@ public class Punto1 {
 
         return palabraConMasVocales;
     }
-    }
+}
